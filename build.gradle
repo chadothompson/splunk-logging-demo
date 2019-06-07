@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'groovy'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'me.chadthompson'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.codehaus.groovy:groovy'
+    implementation 'org.codehaus.groovy:groovy-json'
+
+    implementation 'ch.qos.logback:logback-classic'
+    implementation 'ch.qos.logback.contrib:logback-json-classic:0.1.5'
+    implementation 'ch.qos.logback.contrib:logback-jackson:0.1.5'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
